@@ -25,12 +25,10 @@ let getHintEl = document.getElementById("hints");
 
   /*----- functions -----*/
 
-  let restart = function () {
-    buttonfunc = document.getElementById("playagain");
+  let clues = function() {
+    hintbtn = document.getElementById("hints")
+}
+function refreshPage(){
+    window.location.reload();
+} 
 
-
-
-  }
-
-
-  
