@@ -45,6 +45,15 @@ font-weight: bold;
     font-size: 16px;
     cursor: pointer;
     float: right;
+    
+  }
+
+
+  img {
+
+    display: flex;
+    margin: auto;
+    height: 200px;
   }
 
 
