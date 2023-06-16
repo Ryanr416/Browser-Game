@@ -1,8 +1,3 @@
-
-
-
-
-
 /*----- constants -----*/
 
 
@@ -21,7 +16,7 @@ let getHintEl = document.getElementById("hints");
 
 
   /*----- event listeners -----*/
-
+restartbtn.addEventListener(onClick="refreshPage()")
 
   /*----- functions -----*/
 
