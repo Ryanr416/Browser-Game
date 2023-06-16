@@ -8,7 +8,14 @@ body {
 h1 {
 
 text-align: center;
-color: grey;
+color: rgb(33, 132, 58);
 font-family: 'Dancing Script', cursive;
+font-weight: bold;
 
 }
+
+
+#lives {
+    color:rgb(33, 132, 58);
+
+} 
