@@ -25,9 +25,11 @@ let getHintEl = document.getElementById("hints");
 
   /*----- functions -----*/
 
+
   let clues = function() {
     hintbtn = document.getElementById("hints")
 }
+
 function refreshPage(){
     window.location.reload();
 } 
