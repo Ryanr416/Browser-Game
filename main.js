@@ -19,13 +19,6 @@ let getHintEl = document.getElementById("hints");
 restartbtn.addEventListener(onClick="refreshPage()")
 
   /*----- functions -----*/
-
-
-  let clues = function() {
-    hintbtn = document.getElementById("hints")
-}
-
 function refreshPage(){
     window.location.reload();
 } 
-
