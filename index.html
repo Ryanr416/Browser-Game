@@ -13,18 +13,31 @@
 </head>
 <body>
 <div class="titleTheme">
+
 <h1>HANGMAN</h1>
 <h3></h3>
 </div>
 <p id="lives">
-    Lives Available: $`{lives}`
+    Lives Available: ${lives}
 </p>
 <p id="letters">
     Click a letter below, or click hints for some helpful guidance.
 </p>
 
+
+
+
+<div class="wrapper">
+    <div id="buttons"></div>
+
+</div>
 <img src="https://hangman.doncolton.com/play/hang0.png">
+<div id ="hangmanPic"></div>
 <button class="restartbtn"  onClick="refreshPage()">PLAY AGAIN</button>
 <button class="hints" onClick=>HINTS</button>
+
+
 </body>
 </html>
+
+
