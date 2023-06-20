@@ -6,7 +6,7 @@
 
 
   /*----- state variables -----*/
- 
+
 let guess ;  // -- current guess
 let guesses = []; // -- how many guesses are left
 let lives = 10 ; // -- how many lives are left
@@ -25,7 +25,7 @@ let lettersEl = document.getElementById("letters");
 let p = document.getElementById("ip")
 let space = document.getElementById("space")
 let del = document.getElementById("del")
-
+let q = document.getElementsByClassName("Q")
 // switch pics each time you lose a life
  var hangmanPic = function() {
 if (lives === 5 ) {
@@ -38,11 +38,13 @@ if (lives === 5 ) {
   /*----- event listeners -----*/
 
 
-
   /*----- functions -----*/
 function refreshPage(){
     window.location.reload();
 } 
+q.onClick = function(){
+  return Q='q'
+}
 
 // array.from
 
@@ -85,3 +87,6 @@ if (rndmWordArray.length === winWordArray.length)
 // if lives === (certain number, add picture to hangman)
 
 // 
+
+
+
