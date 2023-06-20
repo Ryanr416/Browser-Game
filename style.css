@@ -78,3 +78,28 @@ color: #4CAF50;
     cursor: pointer;
     
 }
+
+.row4 , .backspace , .space{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keybord .backspace , .space{
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+ 
+}
+.backspace , .space{
+  border-radius: 5px;
+  box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
+}
+.keybord .space{
+  width: 300px;
+  height: 50px;
+}
+.keybord .backspace {
+  width: 100px;
+  height: 50px;
+  margin-left: 15px;
+}
