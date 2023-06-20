@@ -23,49 +23,28 @@ var letters;
 let livesLeftEl = document.getElementById("lives");
 let lettersEl = document.getElementById("letters");
 let getHintEl = document.getElementById("hints");
+let button = document.getElementsByTagName("button")
+let p = document.getElementById("ip")
+let space = document.getElementById("space")
+let del = document.getElementById("del")
 
-
-//switch pics each time you lose a life
-var hangmanPic = function() {
+// switch pics each time you lose a life
+ var hangmanPic = function() {
 if (lives === 5 ) {
-<img src="https://hangman.doncolton.com/play/hang0.png"></img>
+//<img src="https://hangman.doncolton.com/play/hang0.png"></img>
 }
 }
 
-var buttons = function () {
-  myButtons = document.getElementById('buttons');
-  letters = document.createElement('ul');
-
-  for (var i = 0; i < alphabet.length; i++) {
-    letters.id = 'alphabet';
-    list = document.createElement('li');
-    list.id = 'letter';
-    list.innerHTML = alphabet[i];
-    myButtons.appendChild(letters);
-    letters.appendChild(list);
-  }
-}
 // dynamically rendering elements
 
 
 // why doesnt my buttons element render in the browser
-var dashes = function () {
-  myDashes = document.getElementById('buttons');
-  spaces = document.createElement('ul');
 
-  for (var i = 0; i < rndmWordArray.length; i++) {
-    letters.id = '';
-    list = document.createElement('li');
-    list.id = '';
-    list.innerHTML = rndmWordArray[i];
-    myButtons.appendChild(letters);
-    letters.appendChild(list);
-  }
-}
 
 
   /*----- event listeners -----*/
-buttons();
+
+
 
   /*----- functions -----*/
 function refreshPage(){
@@ -107,11 +86,7 @@ if (rndmWordArray.length === winWordArray.length)
 
 }
 
-function wordReveal() {
-if(guesses.includes(userInput))
 
-
-}
 
 
 // if lives === (certain number, add picture to hangman)

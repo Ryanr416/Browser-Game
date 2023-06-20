@@ -34,7 +34,6 @@ font-weight: bold;
 
   }
 
-
   img {
 
     display: flex;
@@ -42,18 +41,9 @@ font-weight: bold;
     height: 200px;
   }
 
-  #buttons {
-background-color: black;
-color: #4CAF50;
-  }
- 
-
-
-
-
   .keybord{
     width: 680px;
-    margin:200px auto 50px;
+    margin: 20px;px auto 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
