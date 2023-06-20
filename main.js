@@ -22,10 +22,12 @@ var letters;
   /*----- cached elements  -----*/
 let livesLeftEl = document.getElementById("lives");
 let lettersEl = document.getElementById("letters");
-let p = document.getElementById("ip")
-let space = document.getElementById("space")
-let del = document.getElementById("del")
-let q = document.getElementsByClassName("Q")
+let p = document.getElementById("ip");
+let space = document.getElementById("space");
+let del = document.getElementById("del");
+let q = document.getElementsByClassName("Q");
+let charArray = word.split("");
+let dashes = document.getElementsByClassName("dashes");
 // switch pics each time you lose a life
  var hangmanPic = function() {
 if (lives === 5 ) {
@@ -39,6 +41,8 @@ if (lives === 5 ) {
 
 
   /*----- functions -----*/
+
+
 function refreshPage(){
     window.location.reload();
 } 
@@ -46,6 +50,8 @@ q.onClick = function(){
   return Q='q'
 }
 
+let displayItem = word.replace(/./g, '<span class="dashes">_</span>')
+userInput.innerHTML = displayItem;
 // array.from
 
 let rndmWordArray = Array.from(word);
