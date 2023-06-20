@@ -24,13 +24,16 @@ font-weight: bold;
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 100px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: auto;
     cursor: pointer;
+    float: right;
 
   }
 
@@ -41,16 +44,15 @@ font-weight: bold;
     height: 200px;
   }
 
-  .keybord{
+  .keyboard{
     width: 680px;
-    margin: 20px;px auto 50px;
+    margin: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding:20px 20px;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: 0;
+    
 }
 .row{
     margin:5px ;
@@ -69,26 +71,27 @@ font-weight: bold;
     
 }
 
-.row4 , .backspace , .space{
+.row4 , .del , .space{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.keybord .backspace , .space{
+.keyboard .del , .space{
   color: white;
   font-weight: bold;
   cursor: pointer;
  
 }
-.backspace , .space{
+.del , .space{
   border-radius: 5px;
   box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
 }
-.keybord .space{
+.keyboard .space{
   width: 300px;
   height: 50px;
 }
-.keybord .backspace {
+.keyboard .del {
+
   width: 100px;
   height: 50px;
   margin-left: 15px;

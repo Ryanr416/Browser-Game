@@ -13,7 +13,7 @@ let lives = 10 ; // -- how many lives are left
 let blank ; // -- the blank space used for the correct letters
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let dictionary = ["toyota", "honda", "subaru", "mazda"];
-var selectedWord;
+var selectedWord; 
 var rndmNum;
 var word = dictionary[Math.floor(Math.random() * dictionary.length)];
 var winWordArray = [];
@@ -22,8 +22,6 @@ var letters;
   /*----- cached elements  -----*/
 let livesLeftEl = document.getElementById("lives");
 let lettersEl = document.getElementById("letters");
-let getHintEl = document.getElementById("hints");
-let button = document.getElementsByTagName("button")
 let p = document.getElementById("ip")
 let space = document.getElementById("space")
 let del = document.getElementById("del")
@@ -36,11 +34,6 @@ if (lives === 5 ) {
 }
 
 // dynamically rendering elements
-
-
-// why doesnt my buttons element render in the browser
-
-
 
   /*----- event listeners -----*/
 
