@@ -1,13 +1,11 @@
 
 
 
-
 /*----- constants -----*/
 const myButton = document.querySelector("#Q");
 const container = document.getElementById("alphabetButtons")
   /*----- state variables -----*/
-
-let guess ;  // -- current guess
+let guess = '';  // -- current guess
 let guesses = []; // -- how many guesses are left
 let lives = 6 ; // -- how many lives are left
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -25,10 +23,8 @@ let p = document.getElementById("ip");
 let space = document.getElementById("space");
 let del = document.getElementById("del");
 let q = document.getElementsByClassName("Q");
-let charArray = word.split("");
-let dashes = document.getElementsByClassName("dashes");
 let answer = document.getElementById("blanks")
-
+let underscore = '' ;
 // switch pics each time you lose a life
 let hangmanPic = function() {
 if (lives === 5 ) {
@@ -38,13 +34,24 @@ if (lives === 5 ) {
 // dynamically rendering elements
 
   /*----- event listeners -----*/
+
+for (let i = 0; i < word.length; i++) {
+  underscore += '_' 
+}
+ answer.textContent = underscore
+
+guess = underscore;
+
+
+
+
 myButton.addEventListener('click', () => {
   alert("NO HINTS AVAILABLE! FIGURE THIS ONE OUT ON YOUR OWN!")
-  console.log('Button Clicked!');
+  
 });
 
-  /*----- functions -----*/
-  
+
+  /*----- functions -----*/ 
 function generateButton() {
    let buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
    .split("")
@@ -55,6 +62,7 @@ function generateButton() {
      >
       ${letter}
      </button>`
+     
    )
    .join("");
 return buttonsHTML;
@@ -76,7 +84,28 @@ function handleClick(event) {
         loseCondition();
       } else {
         winConditon();
+
+ let newString = '';
+          for (let i = 0; i < word.length; i++) {
+          
+           if (word[i] === event.target.innerText ) {
+newString += event.target.innerText
+           } else {   
+            newString += guess[i]
+            
+
+          }
+        }
+          answer.textContent = newString;
+    guess = newString
+
+         console.log(event.target.innerText)
       }
+
+
+
+
+
 const buttonId = document.getElementById(event.target.id);
 buttonId.classList.add("selected");
 
@@ -90,12 +119,18 @@ function refreshPage(){
     window.location.reload();
 } 
 
-let displayItem = word.replace(/./g, '<span class="dashes">_</span>)'
+
+
+
+
+
+
+
 
 
 // array.from
 
-)
+
 
 console.log(word);
 
@@ -137,4 +172,3 @@ if (rndmWordArray.length === winWordArray.length)
 
 container.innerHTML = generateButton();
 container.addEventListener("click", handleClick);
-
