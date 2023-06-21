@@ -4,7 +4,7 @@
 
 /*----- constants -----*/
 const myButton = document.querySelector("#Q");
-
+const container = document.getElementById("alphabetButtons")
   /*----- state variables -----*/
 
 let guess ;  // -- current guess
@@ -40,11 +40,12 @@ if (lives === 5 ) {
 // dynamically rendering elements
 
   /*----- event listeners -----*/
-myButton.addEventListener('click', () => {
-  console.log('Button Clicked!');
-});
+//myButton.addEventListener('click', () => {
+  //console.log('Button Clicked!');
+//});
 
   /*----- functions -----*/
+  
 function generateButton() {
    let buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
    .split("")
@@ -58,9 +59,26 @@ function generateButton() {
    )
    .join("");
 return buttonsHTML;
-
-
 }
+function handleClick(event) {
+   const isButton = event.target.nodeName === "BUTTON";
+   if (isButton) {
+// console.dir(event.target.id)
+//console.log(isButton)
+const buttonId = document.getElementById(event.target.id);
+buttonId.classList.add("selected");
+
+   }
+return;
+}
+
+
+
+
+
+
+
+
   let rndmWordArray = Array.from(word);
 
 
@@ -70,14 +88,13 @@ return buttonsHTML;
 function refreshPage(){
     window.location.reload();
 } 
-q.onClick = function(){
-  return Q='q'
-}
+
+let displayItem = word.replace(/./g, '<span class="dashes">_</span>)'
 
 
 // array.from
 
-
+)
 
 console.log(word);
 
@@ -117,5 +134,6 @@ if (rndmWordArray.length === winWordArray.length)
 
 // 
 
-
+container.innerHTML = generateButton();
+container.addEventListener("click", handleClick);
 
