@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HANGMAN</title>
-    <script src="main.js"></script>
+    
     <link rel="stylesheet" href ="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,10 @@
 <h1>HANGMAN</h1>
 <h3></h3>
 </div>
+<p id="blanks"></p>
+<p id="lives">
+    Lives Available: ${lives}
+</p>
 <p id="intro">
     Click a letter below to begin your game. 
 </p>
@@ -24,6 +28,7 @@
 <div id ="hangmanPic"></div>
 <div class='keyboard'>
     <div class='row row1'>
+        <button id="Q">Q</button>
         <button>Q</button>
         <button>W</button>
         <button>E</button>
@@ -57,7 +62,7 @@
         </div>
 </div>
 <button class="restartbtn"  onClick="refreshPage()">PLAY AGAIN</button>
-
+<script src="main.js"></script>
 </body>
 </html>
 
