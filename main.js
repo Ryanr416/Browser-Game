@@ -28,6 +28,7 @@ let q = document.getElementsByClassName("Q");
 let charArray = word.split("");
 let dashes = document.getElementsByClassName("dashes");
 let answer = document.getElementById("blanks")
+
 // switch pics each time you lose a life
 let hangmanPic = function() {
 if (lives === 5 ) {
@@ -40,9 +41,9 @@ if (lives === 5 ) {
 // dynamically rendering elements
 
   /*----- event listeners -----*/
-//myButton.addEventListener('click', () => {
-  //console.log('Button Clicked!');
-//});
+myButton.addEventListener('click', () => {
+  console.log('Button Clicked!');
+});
 
   /*----- functions -----*/
   
@@ -60,11 +61,21 @@ function generateButton() {
    .join("");
 return buttonsHTML;
 }
+let rndmWordArray = Array.from(word);
 function handleClick(event) {
    const isButton = event.target.nodeName === "BUTTON";
    if (isButton) {
-// console.dir(event.target.id)
-//console.log(isButton)
+
+      if (rndmWordArray.includes(event.target.id)) {
+          guesses.push(event.target.id);
+          winWordArray.push(event.target.id);
+      console.log('match detected', event.target.id)
+      } else {
+       guesses.push(event.target.id);
+       lives--;
+       console.log('lives =', lives)
+      }
+
 const buttonId = document.getElementById(event.target.id);
 buttonId.classList.add("selected");
 
@@ -79,7 +90,7 @@ return;
 
 
 
-  let rndmWordArray = Array.from(word);
+
 
 
   console.log(rndmWordArray);
