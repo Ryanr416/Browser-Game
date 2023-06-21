@@ -74,8 +74,12 @@ function handleClick(event) {
        guesses.push(event.target.id);
        lives--;
        console.log('lives =', lives)
+      } 
+      if (lives === 0) {
+        loseCondition();
+      } else {
+        winConditon();
       }
-
 const buttonId = document.getElementById(event.target.id);
 buttonId.classList.add("selected");
 
@@ -125,7 +129,7 @@ console.log(word);
 
 
 
-function loseCondition(lives) {
+function loseCondition() {
 if (lives === 0){
 return alert('YOU HAVE LOST!');
 }
