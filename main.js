@@ -35,13 +35,11 @@ if (lives === 5 ) {
 //<img src="https://hangman.doncolton.com/play/hang0.png"></img>
 }
 }
-
-
-
 // dynamically rendering elements
 
   /*----- event listeners -----*/
 myButton.addEventListener('click', () => {
+  alert("NO HINTS AVAILABLE! FIGURE THIS ONE OUT ON YOUR OWN!")
   console.log('Button Clicked!');
 });
 
@@ -64,8 +62,7 @@ return buttonsHTML;
 let rndmWordArray = Array.from(word);
 function handleClick(event) {
    const isButton = event.target.nodeName === "BUTTON";
-   if (isButton) {
-
+   {
       if (rndmWordArray.includes(event.target.id)) {
           guesses.push(event.target.id);
           winWordArray.push(event.target.id);
@@ -86,17 +83,6 @@ buttonId.classList.add("selected");
    }
 return;
 }
-
-
-
-
-
-
-
-
-
-
-
   console.log(rndmWordArray);
 
 
