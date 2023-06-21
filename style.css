@@ -1,90 +1,92 @@
 body {
 
-    background-color: lightskyblue;
+  background-color: lightskyblue;
 
 }
 
 h1 {
 
-text-align: center;
-color: rgb(33, 132, 58);
-font-family: 'Dancing Script', cursive;
-font-weight: bold;
+  text-align: center;
+  color: rgb(33, 132, 58);
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
 
 }
 
 #lives {
-    color:rgb(33, 132, 58);
-    text-align: center;
-    font-size: larger;
+  color: rgb(33, 132, 58);
+  text-align: center;
+  font-size: larger;
 
-} 
+}
 
 .restartbtn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    margin: auto;
-    cursor: pointer;
-    float: right;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  float: right;
 
-  }
-
-  img {
-
-    display: flex;
-    margin: auto;
-    height: 200px;
-  }
-
-  .keyboard{
-    width: 680px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    padding:20px 20px;
-    border-radius: 10px;
-    
 }
-.row{
-    margin:5px ;
-    user-select: none;
-    float: right;
+
+img {
+
+  display: flex;
+  margin: auto;
+  height: 200px;
 }
- button{
-    width: 45px;
-    height: 50px;
-    font-weight: bold;
-    margin: 0 4px;
-    background-color: green;
-    color:white;
-    border-radius: 5px;
-    cursor: pointer;
-    
+
+.keyboard {
+  width: 680px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 10px;
+
+}
+
+.row {
+  margin: 5px;
+  user-select: none;
+  float: right;
+}
+
+button {
+  width: 45px;
+  height: 50px;
+  font-weight: bold;
+  margin: 0 4px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
 
 #Q {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    margin: auto;
-    cursor: pointer;
-    float: ;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  float: ;
 
-  }
+}
