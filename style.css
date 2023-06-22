@@ -90,3 +90,8 @@ button {
   float: ;
 
 }
+
+.selected {
+
+  background-color: red;
+}

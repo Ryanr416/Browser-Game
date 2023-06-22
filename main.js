@@ -1,6 +1,7 @@
 /*----- constants -----*/
 const myButton = document.querySelector("#Q");
 const container = document.getElementById("alphabetButtons")
+const livesContainer = document.getElementById('lives')
 /*----- state variables -----*/
 let guess = '';  // -- current guess
 let guesses = []; // -- how many guesses are left
@@ -89,6 +90,7 @@ function handleClick(event) {
     buttonId.classList.add("selected");
 
   }
+  livesContainer.innerText = `Lives left - ${lives}`;
   return;
 }
 console.log(rndmWordArray);
@@ -112,6 +114,6 @@ function winConditon() {
 // if lives === (certain number, add picture to hangman)
 
 // 
-
+livesContainer.innerText = `Lives left - ${lives}`;
 container.innerHTML = generateButton();
 container.addEventListener("click", handleClick);
