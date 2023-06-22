@@ -117,11 +117,11 @@ console.log(word);
 
 function loseCondition() {
   if (lives === 0) {
-    return alert('YOU HAVE LOST! TRY AGAIN.');
+    return gameCondition.innerText = "You have lost, Please try again!";
   }
 }
 function winConditon() {
-  if (rndmWordArray.length === winWordArray.length) { return alert('YOU HAVE WON!!! CONGRATS!') }
+  if (rndmWordArray.length === winWordArray.length)  return gameCondition.innerText = "YOU HAVE WON! CONGRATULATIONS!" 
 
 }
 
@@ -135,6 +135,7 @@ function updateImage() {
 }
 
 // 
+
 livesContainer.innerText = `Lives left - ${lives}`;
 container.innerHTML = generateButton();
 container.addEventListener("click", handleClick);
