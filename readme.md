@@ -1,10 +1,21 @@
 Hangman
+
+
 A game of puzzle solving using the category provided. Spell the word before the poor stick figure has been hanged!
 
 
 
 
 The technologies used in this browser game are as follows : JavaScript, HTML, and CSS.
+
+
+You can see screenshots of the full game by going to the following links : 
+
+https://imgur.com/vrb6Nzc
+
+https://imgur.com/YYxA7GP
+
+https://imgur.com/P7Q3qgk
 
 
 
