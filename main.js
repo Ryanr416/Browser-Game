@@ -34,7 +34,7 @@ guess = underscore;
 // add a trick Hints button
 
 myButton.addEventListener('click', () => {
-  alert("NO HINTS AVAILABLE! FIGURE THIS ONE OUT ON YOUR OWN!")
+  alert("No hints available, please try on your own!")
 
 });
 
