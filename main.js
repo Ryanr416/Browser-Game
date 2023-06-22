@@ -14,16 +14,16 @@ let rndmNum;
 let word = dictionary[Math.floor(Math.random() * dictionary.length)];
 let winWordArray = [];
 let letters;
+let underscore = '';
 /*----- cached elements  -----*/
 let livesLeftEl = document.getElementById("lives");
 let lettersEl = document.getElementById("letters");
 let p = document.getElementById("ip");
 let q = document.getElementsByClassName("Q");
 let answer = document.getElementById("blanks")
-let underscore = '';
+
 /*----- event listeners -----*/
 // a for statement to add underscores that change with each correct guess
-
 
 for (let i = 0; i < word.length; i++) {
   underscore += '_'
@@ -31,15 +31,12 @@ for (let i = 0; i < word.length; i++) {
 answer.textContent = underscore
 guess = underscore;
 
-
 // add a trick Hints button
-
 
 myButton.addEventListener('click', () => {
   alert("NO HINTS AVAILABLE! FIGURE THIS ONE OUT ON YOUR OWN!")
 
 });
-
 
 /*----- functions -----*/
 // generating the keyboard and detecting the letter pressed
@@ -76,7 +73,6 @@ function handleClick(event) {
       lives--;
       livesContainer.innerText = `Lives left - ${lives}`;
       updateImage();
-      console.log('lives =', lives)
     }
     if (lives === 0) {
       loseCondition();
@@ -92,7 +88,6 @@ function handleClick(event) {
           newString += guess[i]
         }
       }
-
 
       answer.textContent = newString;
       guess = newString
@@ -111,11 +106,7 @@ function handleClick(event) {
 }
 console.log(rndmWordArray);
 
-
-
 // refresh pages when clicking play again
-
-
 
 function refreshPage() {
   window.location.reload();
@@ -142,7 +133,6 @@ function updateImage() {
     headImage.src = imageUrls[lives]
   }
 }
-
 
 // 
 livesContainer.innerText = `Lives left - ${lives}`;
