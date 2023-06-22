@@ -9,7 +9,7 @@ let guess = '';  // -- current guess
 let guesses = []; // -- how many guesses are left
 let lives = 6; // -- how many lives are left
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-let dictionary = ["toyota", "honda", "subaru", "mazda"];
+let dictionary = ["audi", "lexus", "tesla", "porsche"];
 let rndmNum;
 let word = dictionary[Math.floor(Math.random() * dictionary.length)];
 let winWordArray = [];
@@ -121,6 +121,8 @@ function loseCondition() {
   }
 }
 function winConditon() {
+  console.log("rndmArrayLength", rndmWordArray.length)
+  console.log("winWordArrayLength", winWordArray.length)
   if (rndmWordArray.length === winWordArray.length)  return gameCondition.innerText = "YOU HAVE WON! CONGRATULATIONS!" 
 
 }
