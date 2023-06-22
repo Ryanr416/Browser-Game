@@ -2,23 +2,19 @@ body {
   background-image: url("https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 
 }
-
 h1 {
-
   text-align: center;
   color: rgb(33, 132, 58);
   font-family: 'Dancing Script', cursive;
   font-weight: bold;
 
 }
-
 #lives {
   color: rgb(33, 132, 58);
   text-align: center;
   font-size: larger;
 
 }
-
 .restartbtn {
   background-color: #4CAF50;
   border: none;
@@ -33,14 +29,12 @@ h1 {
   cursor: pointer;
   margin-top: 8px;
 }
-
 img {
 
   display: flex;
   margin: auto;
   height: 200px;
 }
-
 button {
   width: 45px;
   height: 50px;
@@ -52,7 +46,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-
 #Q {
   background-color: #4CAF50;
   border: none;
@@ -65,10 +58,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
-
-
 }
-
 #intro {
 
   color: black;
