@@ -91,7 +91,10 @@ button {
 
 }
 
-.selected {
+#intro {
 
-  background-color: red;
+  color: black;
+  font-weight: bolder;
+  font-size: large;
 }
+

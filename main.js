@@ -3,7 +3,7 @@ const myButton = document.querySelector("#Q");
 const container = document.getElementById("alphabetButtons")
 const livesContainer = document.getElementById("lives")
 const headImage = document.getElementById("Head")
-const imageUrls = ["https://f.ptcdn.info/132/033/000/1436172708-name120-o.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Hangman-5.svg/384px-Hangman-5.svg.png?20180103032948", "https://upload.wikimedia.org/wikipedia/commons/2/27/Hangman-4.png", "https://upload.wikimedia.org/wikipedia/commons/9/97/Hangman-3.png","https://static.wikia.nocookie.net/bbdc698d-065b-47fc-a05d-37b9fafec997/scale-to-width/755", "https://i.stack.imgur.com/RnemK.jpg", "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png" ];
+const imageUrls = ["https://f.ptcdn.info/132/033/000/1436172708-name120-o.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Hangman-5.svg/384px-Hangman-5.svg.png?20180103032948", "https://upload.wikimedia.org/wikipedia/commons/2/27/Hangman-4.png", "https://upload.wikimedia.org/wikipedia/commons/9/97/Hangman-3.png", "https://static.wikia.nocookie.net/bbdc698d-065b-47fc-a05d-37b9fafec997/scale-to-width/755", "https://i.stack.imgur.com/RnemK.jpg", "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png"];
 /*----- state variables -----*/
 let guess = '';  // -- current guess
 let guesses = []; // -- how many guesses are left
@@ -21,24 +21,28 @@ let p = document.getElementById("ip");
 let q = document.getElementsByClassName("Q");
 let answer = document.getElementById("blanks")
 let underscore = '';
-// switch pics each time you lose a life
-let hangmanPic = function () {
-  if (lives === 5) {
-    //<img src="https://hangman.doncolton.com/play/hang0.png"></img>
-  }
-}
 /*----- event listeners -----*/
+// a for statement to add underscores that change with each correct guess
+
+
 for (let i = 0; i < word.length; i++) {
   underscore += '_'
 }
 answer.textContent = underscore
 guess = underscore;
 
+
+// add a trick Hints button
+
+
 myButton.addEventListener('click', () => {
   alert("NO HINTS AVAILABLE! FIGURE THIS ONE OUT ON YOUR OWN!")
 
 });
+
+
 /*----- functions -----*/
+// generating the keyboard and detecting the letter pressed
 
 function generateButton() {
   let buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
@@ -57,8 +61,9 @@ function generateButton() {
 }
 let rndmWordArray = Array.from(word);
 
-
-
+// handclick to handle the userinput and add it to an array 'winwordarray' and if it doesnt match it will subtract a life
+// also handle image update each time a life is lost
+// also handles replacing the underscores with the correct letter each time a user selects it
 function handleClick(event) {
   const isButton = event.target.nodeName === "BUTTON";
   {
@@ -87,8 +92,8 @@ function handleClick(event) {
           newString += guess[i]
         }
       }
-      
-      
+
+
       answer.textContent = newString;
       guess = newString
 
@@ -104,8 +109,12 @@ function handleClick(event) {
   livesContainer.innerText = `Lives left - ${lives}`;
   return;
 }
-
 console.log(rndmWordArray);
+
+
+
+// refresh pages when clicking play again
+
 
 
 function refreshPage() {
@@ -113,30 +122,26 @@ function refreshPage() {
 }
 console.log(word);
 
+// losing function followed by win condition
+
 function loseCondition() {
   if (lives === 0) {
     return alert('YOU HAVE LOST! TRY AGAIN.');
   }
-
 }
 function winConditon() {
   if (rndmWordArray.length === winWordArray.length) { return alert('YOU HAVE WON!!! CONGRATS!') }
 
 }
 
+// function to update the image each time a life is lost
 
-function updateImage () {
+function updateImage() {
 
-  if (lives >= 0 && lives < imageUrls.length){
+  if (lives >= 0 && lives < imageUrls.length) {
     headImage.src = imageUrls[lives]
   }
 }
-// if lives === (certain number, add picture to hangman)
-
-if (lives === 5) {
-  document.getElementById("Head").src = 'https://i.stack.imgur.com/RnemK.jpg';
-}
-
 
 
 // 
