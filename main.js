@@ -1,7 +1,9 @@
 /*----- constants -----*/
 const myButton = document.querySelector("#Q");
 const container = document.getElementById("alphabetButtons")
-const livesContainer = document.getElementById('lives')
+const livesContainer = document.getElementById("lives")
+const headImage = document.getElementById("Head")
+const imageUrls = ["https://f.ptcdn.info/132/033/000/1436172708-name120-o.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Hangman-5.svg/384px-Hangman-5.svg.png?20180103032948", "https://upload.wikimedia.org/wikipedia/commons/2/27/Hangman-4.png", "https://upload.wikimedia.org/wikipedia/commons/9/97/Hangman-3.png","https://static.wikia.nocookie.net/bbdc698d-065b-47fc-a05d-37b9fafec997/scale-to-width/755", "https://i.stack.imgur.com/RnemK.jpg", "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png" ];
 /*----- state variables -----*/
 let guess = '';  // -- current guess
 let guesses = []; // -- how many guesses are left
@@ -27,7 +29,7 @@ let hangmanPic = function () {
 }
 /*----- event listeners -----*/
 for (let i = 0; i < word.length; i++) {
-  underscore += '_' 
+  underscore += '_'
 }
 answer.textContent = underscore
 guess = underscore;
@@ -37,6 +39,7 @@ myButton.addEventListener('click', () => {
 
 });
 /*----- functions -----*/
+
 function generateButton() {
   let buttonsHTML = "abcdefghijklmnopqrstuvwxyz"
     .split("")
@@ -53,6 +56,9 @@ function generateButton() {
   return buttonsHTML;
 }
 let rndmWordArray = Array.from(word);
+
+
+
 function handleClick(event) {
   const isButton = event.target.nodeName === "BUTTON";
   {
@@ -63,6 +69,8 @@ function handleClick(event) {
     } else {
       guesses.push(event.target.id);
       lives--;
+      livesContainer.innerText = `Lives left - ${lives}`;
+      updateImage();
       console.log('lives =', lives)
     }
     if (lives === 0) {
@@ -77,22 +85,26 @@ function handleClick(event) {
           newString += event.target.innerText
         } else {
           newString += guess[i]
-
-
         }
       }
+      
+      
       answer.textContent = newString;
       guess = newString
 
       console.log(event.target.innerText)
     }
- const buttonId = document.getElementById(event.target.id);
+
+
+    const buttonId = document.getElementById(event.target.id);
     buttonId.classList.add("selected");
 
   }
+
   livesContainer.innerText = `Lives left - ${lives}`;
   return;
 }
+
 console.log(rndmWordArray);
 
 
@@ -111,7 +123,21 @@ function winConditon() {
   if (rndmWordArray.length === winWordArray.length) { return alert('YOU HAVE WON!!! CONGRATS!') }
 
 }
+
+
+function updateImage () {
+
+  if (lives >= 0 && lives < imageUrls.length){
+    headImage.src = imageUrls[lives]
+  }
+}
 // if lives === (certain number, add picture to hangman)
+
+if (lives === 5) {
+  document.getElementById("Head").src = 'https://i.stack.imgur.com/RnemK.jpg';
+}
+
+
 
 // 
 livesContainer.innerText = `Lives left - ${lives}`;
