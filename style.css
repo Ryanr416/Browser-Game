@@ -75,3 +75,6 @@ button {
   font-weight: bolder;
   font-size: large;
 }
+.selected {
+  background-color: grey;
+}
