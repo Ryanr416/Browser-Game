@@ -123,7 +123,7 @@ function loseCondition() {
 function winConditon() {
   console.log("rndmArrayLength", rndmWordArray.length)
   console.log("winWordArrayLength", winWordArray.length)
-  if (rndmWordArray.length === winWordArray.length)  return gameCondition.innerText = "YOU HAVE WON! CONGRATULATIONS!" 
+  if (rndmWordArray.length === winWordArray.length) return gameCondition.innerText = "YOU HAVE WON! CONGRATULATIONS!"
 
 }
 

@@ -11,11 +11,11 @@ The technologies used in this browser game are as follows : JavaScript, HTML, an
 
 You can see screenshots of the full game by going to the following links : 
 
-https://imgur.com/vrb6Nzc
+![My Remote Image] (https://imgur.com/vrb6Nzc)
 
-https://imgur.com/YYxA7GP
+![My Remote Image] (https://imgur.com/YYxA7GP)
 
-https://imgur.com/P7Q3qgk
+![My Remote Image] (https://imgur.com/P7Q3qgk)
 
 
 

@@ -41,23 +41,6 @@ img {
   height: 200px;
 }
 
-.keyboard {
-  width: 680px;
-  margin: 20px;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  padding: 20px 20px;
-  border-radius: 10px;
-  justify-content: right;
-}
-
-.row {
-  margin: 5px;
-  user-select: none;
- justify-content: center;
-}
-
 button {
   width: 45px;
   height: 50px;
@@ -70,7 +53,6 @@ button {
   cursor: pointer;
 }
 
-
 #Q {
   background-color: #4CAF50;
   border: none;
@@ -82,8 +64,9 @@ button {
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 10px;;
-  
+  margin-top: 10px;
+
+
 }
 
 #intro {
