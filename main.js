@@ -59,8 +59,8 @@ function generateButton() {
 let rndmWordArray = Array.from(word);
 
 // handclick to handle the userinput and add it to an array 'winwordarray' and if it doesnt match it will subtract a life
-// also handle image update each time a life is lost
-// also handles replacing the underscores with the correct letter each time a user selects it
+
+
 function handleClick(event) {
   const isButton = event.target.nodeName === "BUTTON";
   {
@@ -70,6 +70,9 @@ function handleClick(event) {
       console.log('match detected', event.target.id)
     } else {
       guesses.push(event.target.id);
+
+      // image update each time life is lost
+
       lives--;
       livesContainer.innerText = `Lives left - ${lives}`;
       updateImage();
@@ -79,6 +82,7 @@ function handleClick(event) {
     } else {
       winConditon();
 
+      // also handles replacing the underscores with the correct letter each time a user selects it
       let newString = '';
       for (let i = 0; i < word.length; i++) {
 
